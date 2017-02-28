@@ -19,7 +19,7 @@ export class HomePage {
   	  	mode: 'static',
   	  	position: {
   	  		left: '50%',
-  	  		top: '50%'
+  	  		top: '70%'
   	  	},
   	  	size: radius*2,
   	  	color: 'blue'

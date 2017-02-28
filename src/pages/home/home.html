@@ -1,16 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Go Baby Go Universal Controller
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-	<ion-header>
-		Variable Speed
-
-	</ion-header>
+	<div class = "bar bar-subheader">
+		<h6 class = "title">Variable Speed</h6>
+	</div>
 	<ion-item>
 		<ion-range>
 			<ion-icon range-left small name="0%"></ion-icon>
@@ -18,8 +17,21 @@
 		</ion-range>
 	</ion-item>
 	
+	<div class = "bar bar-subheader bar-stable">
+		<h6 class = "title">Onboard Controller</h6>
+	</div>
 
-	
+	<ion-item>
+  		<ion-label> Keyboard</ion-label>
+  		<ion-toggle disabled checked="false"></ion-toggle>
+	</ion-item>
+
+	<ion-item>
+  		<ion-label> Joystick</ion-label>
+  		<ion-toggle disabled checked="false"></ion-toggle>
+	</ion-item>
+
+	<button ion-button color="danger">STOP</button>
 
 
 </ion-content>
