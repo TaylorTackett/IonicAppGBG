@@ -18,19 +18,17 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     console.log("Loaded!!");
 
+    this.controller = "n";
+
   }
 
-  openPage() {
-    // navigate to the new page if it is not the current page
-    this.navCtrl.push(StartPage);
+  getSelectedController(event){
+    console.log(this.controller);
   }
 
   goToNextPage(event) {
+    // send message here!!
     this.navCtrl.push(StartPage);
-  }
-
-  show(event) {
-    console.log("Pressed a button!!");
   }
 
 }

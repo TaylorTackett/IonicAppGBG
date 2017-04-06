@@ -29,8 +29,8 @@
 
   <ion-item>
     <ion-label>Onboard Controller</ion-label>
-    <ion-select [(ngModel)]="controller">
-      <ion-option value="n" selected="true">None</ion-option>
+    <ion-select [(ngModel)]="controller" (ionChange) = "getSelectedController()" >
+      <ion-option value="n">None</ion-option>
       <ion-option value="j">Joystick</ion-option>
       <ion-option value="k">Keyboard</ion-option>
     </ion-select>
@@ -42,8 +42,5 @@
       <ion-icon name="arrow-forward"></ion-icon>
     </button>
   </ion-item>
-
-	<!--<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>-->
-
 
 </ion-content>

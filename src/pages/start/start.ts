@@ -8,17 +8,13 @@ import * as nipplejs from 'nipplejs';
 
 })
 export class StartPage {
-
-  toggleItems: any[];
+  
+  speed: number;
 
   constructor() {
+    this.speed = 0;
 
-	  this.toggleItems = [
-	   { id: "keyboard", value: true},
-	   { id: "joystick", value: false}
-	  ];
-
-  	  var radius = 100;
+  	  /*var radius = 100;
   	  var sampleJoystick = 
   	    {
   	  	mode: 'static',
@@ -31,14 +27,19 @@ export class StartPage {
   	  };
 
   	  var joystick;
-  	  joystick = nipplejs.create(sampleJoystick);
+  	  joystick = nipplejs.create(sampleJoystick);*/
 
 
   }
 
-  toggle(item){
-    alert(item.id + " changed to " + item.value);
+  speedChange(event){
+    console.log("Speed set to " + this.speed + "%.");
+    //Add send message
+  }
 
+  eStop(event){
+    console.log("Stop!");
+    //Add send message
   }
 
 }
