@@ -9,29 +9,22 @@
 <ion-content>
 
 	<ion-item>
-    <ion-img src = "BAM_Logo_RYB.png" height = "300" width = "300"></ion-img>
+    <ion-img src = "build/img/BAM_Logo_RYB.png" height = "200" width = "200"></ion-img>
   </ion-item>
 	
   <ion-item>
   	<div class = "bar bar-subheader bar-stable">
-  		<h6 class = "title">Choose an onboard controller then start the app</h6>
+  		<h6 class = "title">Choose an onboard controller</h6>
+      <h6 class = "title">and then start the app</h6>
   	</div>
   </ion-item>
-
- <!--<button ion-button block icon-right (click)="console.log('hello')">
-    Keyboard                                       
-    <ion-icon name="arrow-forward"></ion-icon>
-  </button>
-  <button ion-button block icon-right onclick="openPage()">
-    Joystick                                              
-    <ion-icon name="arrow-forward"></ion-icon>
-  </button>-->
 
   <ion-item>
     <ion-label>Onboard Controller</ion-label>
     <ion-select [(ngModel)]="controller" (ionChange) = "getSelectedController()" >
       <ion-option value="n">None</ion-option>
-      <ion-option value="j">Joystick</ion-option>
+      <ion-option value="a">Analog Joystick</ion-option>
+      <ion-option value="x">Xbox Joystick</ion-option>
       <ion-option value="k">Keyboard</ion-option>
     </ion-select>
   </ion-item>

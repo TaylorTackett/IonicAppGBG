@@ -7,8 +7,10 @@ import * as nipplejs from 'nipplejs';
   templateUrl: 'start.html'
 
 })
+
 export class StartPage {
   
+  stop: string;
   speed: number;
 
   constructor() {
@@ -28,6 +30,8 @@ export class StartPage {
 
   	  var joystick;
   	  joystick = nipplejs.create(sampleJoystick);*/
+
+      this.stop = "STOP";
 
 
   }
