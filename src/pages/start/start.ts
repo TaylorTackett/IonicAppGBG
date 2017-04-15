@@ -16,7 +16,7 @@ export class StartPage {
   constructor() {
     this.speed = 0;
 
-  	  /*var radius = 100;
+  	  var radius = 100;
   	  var sampleJoystick = 
   	    {
   	  	mode: 'static',
@@ -29,7 +29,7 @@ export class StartPage {
   	  };
 
   	  var joystick;
-  	  joystick = nipplejs.create(sampleJoystick);*/
+  	  joystick = nipplejs.create(sampleJoystick);
 
       this.stop = "STOP";
 
@@ -42,7 +42,16 @@ export class StartPage {
   }
 
   eStop(event){
-    console.log("Stop!");
+    var el = document.getElementById("stopB");
+    if (el.textContent == "STOP") {
+        el.textContent = "GO";
+        el.style.background = "green";
+        console.log("Stop!");
+    } else {
+        el.textContent = "STOP";
+        el.style.backgroundColor = "red";
+        console.log("Go!");
+    }
     //Add send message
   }
 
