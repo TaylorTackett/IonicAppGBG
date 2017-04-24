@@ -12,27 +12,12 @@ export class StartPage {
   
   stop: string;
   speed: number;
+  gesture: string;
 
   constructor() {
     this.speed = 0;
-
-  	  var radius = 100;
-  	  var sampleJoystick = 
-  	    {
-  	  	mode: 'static',
-  	  	position: {
-  	  		left: '50%',
-  	  		top: '70%'
-  	  	},
-  	  	size: radius*2,
-  	  	color: 'blue'
-  	  };
-
-  	  var joystick;
-  	  joystick = nipplejs.create(sampleJoystick);
-
-      this.stop = "STOP";
-
+    this.stop = "STOP";
+    this.gesture = "";
 
   }
 
@@ -53,6 +38,14 @@ export class StartPage {
         console.log("Go!");
     }
     //Add send message
+  }
+
+  move(event){
+    if(typeof arguments[0]=='string'){
+        // use the argument as a string
+        console.log("Move " + arguments[0] + ".");
+        //Add send message
+    }
   }
 
 }
