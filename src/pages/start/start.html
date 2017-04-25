@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar hideBackButton = "true">
+    <ion-title>
+      Go Baby Go Universal Controller
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item>
+		<div class = "bar bar-subheader">
+			<h6 class = "title">Variable Speed</h6>
+		</div>
+	</ion-item>
+
+	<ion-item>
+		<ion-range [(ngModel)] = "speed" (ionChange) ="speedChange()">
+			<ion-icon range-left small name="0%"></ion-icon>
+			<ion-icon range-right small name="100%"></ion-icon>
+		</ion-range>
+	</ion-item>
+
+	<ion-item>
+		<div class = "bar bar-subheader">
+			<h6 class = "title">Emergency Stop</h6>
+			<p>After stopping the car, press to restart</p>
+		</div>
+	</ion-item>
+
+	<ion-item>
+		<button id = "stopB" style = "background:red" ion-button block (click) = "eStop()">STOP</button>
+	</ion-item>
+
+	<ion-item>
+		<div class = "bar bar-subheader">
+			<h6 class = "title">Virtual Joystick</h6>
+		</div>
+	</ion-item> 
+    
+    <ion-grid>
+	    <ion-row> 
+	    	<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part8.png');background-size:100% 100%;" (click) = "move('FL')"></ion-col>
+			<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part1.png');background-size:100% 100%;" (click) = "move('F')"></ion-col>
+			<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part2.png');background-size:100% 100%;" (click) = "move('FR')"></ion-col>
+		</ion-row>
+		<ion-row> 
+	    	<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part7.png');background-size:100% 100%;" (click) = "move('R')"></ion-col>
+			<ion-col style = "height:80px;"></ion-col>
+			<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part3.png');background-size:100% 100%;" (click) = "move('L')"></ion-col>
+		</ion-row>
+		<ion-row> 
+	    	<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part6.png');background-size:100% 100%;" (click) = "move('BL')"></ion-col>
+			<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part5.png');background-size:100% 100%;" (click) = "move('B')"></ion-col>
+			<ion-col style = "height:80px;background-image:url('assets/img/Buttons_Part4.png');background-size:100% 100%;" (click) = "move('BR')"></ion-col>
+		</ion-row>
+	</ion-grid>
+
+
+</ion-content>
