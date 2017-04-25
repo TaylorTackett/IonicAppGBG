@@ -7,31 +7,33 @@
 </ion-header>
 
 <ion-content>
-	<div class = "bar bar-subheader">
-		<h6 class = "title">Variable Speed</h6>
-	</div>
+
 	<ion-item>
-		<ion-range>
-			<ion-icon range-left small name="0%"></ion-icon>
-			<ion-icon range-right small name="100%"></ion-icon>
-		</ion-range>
-	</ion-item>
+    <ion-img src = "assets/img/BAM_Logo_RYB.png" height = "200" width = "200"></ion-img>
+  </ion-item>
 	
-	<div class = "bar bar-subheader bar-stable">
-		<h6 class = "title">Onboard Controller</h6>
-	</div>
+  <ion-item>
+  	<div class = "bar bar-subheader bar-stable">
+  		<h6 class = "title">Choose an onboard controller</h6>
+      <h6 class = "title">and then start the app</h6>
+  	</div>
+  </ion-item>
 
-	<ion-item>
-  		<ion-label> Keyboard</ion-label>
-  		<ion-toggle disabled checked="false"></ion-toggle>
-	</ion-item>
+  <ion-item>
+    <ion-label>Onboard Controller</ion-label>
+    <ion-select [(ngModel)]="controller" (ionChange) = "getSelectedController()" >
+      <ion-option value="n">None</ion-option>
+      <ion-option value="a">Analog Joystick</ion-option>
+      <ion-option value="x">Xbox Joystick</ion-option>
+      <ion-option value="k">Keyboard</ion-option>
+    </ion-select>
+  </ion-item>
 
-	<ion-item>
-  		<ion-label> Joystick</ion-label>
-  		<ion-toggle disabled checked="false"></ion-toggle>
-	</ion-item>
-
-	<button ion-button color="danger">STOP</button>
-
+  <ion-item>
+    <button ion-button block icon-right (click)="goToNextPage()">
+      Start
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-item>
 
 </ion-content>

@@ -2,33 +2,33 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import * as nipplejs from 'nipplejs';
+import { StartPage } from '../start/start';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 
 })
+
 export class HomePage {
 
+  controller: string;
 
   constructor(public navCtrl: NavController) {
-  	  
-  	  var radius = 100;
-  	  var sampleJoystick = {
-  	  	mode: 'static',
-  	  	position: {
-  	  		left: '50%',
-  	  		top: '70%'
-  	  	},
-  	  	size: radius*2,
-  	  	color: 'blue'
-  	  };
+    console.log("Loaded!!");
 
-  	  var joystick;
-  	  joystick = nipplejs.create(sampleJoystick);
+    this.controller = "n";
 
+  }
 
+  getSelectedController(event){
+    console.log(this.controller);
+  }
+
+  goToNextPage(event) {
+    // send message here!!
+    this.navCtrl.push(StartPage);
   }
 
 }
